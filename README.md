@@ -33,8 +33,6 @@ token="your.token"
 ```
 _________________________
   
-
-### Demo : https://streaming-netflix.herokuapp.com/
 💻 Bot project to Artkabis, Sept 2021.
 
 
