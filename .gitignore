@@ -29,4 +29,5 @@ yarn.lock
 package-lock.json
 
 #private params
-config.json
+.txt
+/config.json
