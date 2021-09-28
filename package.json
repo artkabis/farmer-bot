@@ -1,11 +1,11 @@
 {
-  "name": "farmer-bot",
+  "name": "farmer-bot-2",
   "version": "1.0.0",
-  "description": "Bot farmer for Discord",
+  "description": "Bot farmer for Discord v2",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "test"
   },
   "repository": {
@@ -28,11 +28,13 @@
   },
   "homepage": "https://github.com/artkabis/farmer-bot#readme",
   "dependencies": {
+    "@discordjs/builders": "^0.6.0",
     "@discordjs/rest": "0.1.0-canary.0",
     "axios": "^0.21.4",
     "discord-api-types": "^0.23.1",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
+    "fs": "^0.0.1-security",
     "node": "^16.10.0"
   },
   "devDependencies": {
