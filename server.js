@@ -42,13 +42,12 @@ const commands = [
     .setDescription('Replies with avatar commande!'),
 ].map((command) => command.toJSON());
 
-const rest = new REST({ version: '9' }).setToken(
-  'ODkxNjgxMTA5NDMwMTMyODI3.YVB4vw.Hzlp8umIU-72Klp6AfkzohQJmpc'
-);
+console.log(process.env.token, process.env.clientId, process.env.guildId);
+const rest = new REST({ version: '9' }).setToken(process.env.token);
 
 rest
   .put(
-    Routes.applicationGuildCommands('891681109430132827', '891365213352390726'),
+    Routes.applicationGuildCommands(process.env.clientId, process.env.guildId),
     { body: commands }
   )
   .then(() => console.log('Successfully registered application commands.'))
@@ -188,4 +187,4 @@ client.on('messageCreate', async (msg) => {
   );
 });
 
-client.login('ODkxNjgxMTA5NDMwMTMyODI3.YVB4vw.Hzlp8umIU-72Klp6AfkzohQJmpc');
+client.login(process.env.token);
