@@ -16,7 +16,7 @@ Run application (standard mode ) :
 ```bash
 node server.js
 ```
-Run and watch application (PM2 ) :
+Run and watch application ( [PM2](https://pm2.keymetrics.io/docs/usage/watch-and-restart/) ) :
 ```bash
  pm2 start server.js -f --name farmer-bot --watch
 ```
