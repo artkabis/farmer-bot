@@ -1,0 +1,29 @@
+token bot : ODkxNjgxMTA5NDMwMTMyODI3.YVB4vw.VBMbO2avzxYXzQGkwnFCQObWNIM
+
+OAuth2  id client : 891681109430132827
+        Secret client : 0jq1mxsqqFom0ZjxVAKmwyoenrGGXyKY
+
+
+
+bot url : https://discord.com/api/oauth2/authorize?client_id=891681109430132827&permissions=8&scope=bot
+
+
+
+app v2
+
+id app : 892030631129776188 
+clé public : acedf1cd89392aa190d021ca52772ac39f3e2a3805206d19150a1600544ede2c
+
+
+
+
+command pm2 : 
+lancer l'écoute de server.js
+pm2 start server.js -f --name farmer-bot --watch
+
+Stopper l'écoute :
+pm2 stop server.js -f -name farmer-bot
+
+
+Supprimer les instances écoutées :
+pm2 kill
