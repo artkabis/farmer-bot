@@ -42,7 +42,6 @@ const commands = [
     .setDescription('Replies with avatar commande!'),
 ].map((command) => command.toJSON());
 
-console.log(process.env.token, process.env.clientId, process.env.guildId);
 const rest = new REST({ version: '9' }).setToken(process.env.token);
 
 rest
@@ -112,13 +111,6 @@ client.on('messageCreate', async (msg) => {
   const random = Math.floor(Math.random() * 11);
   const channel = client.channels.cache.get('892105340081029120');
 
-  console.log(
-    'start prefix ? ',
-    !msg.content.startsWith(prefix),
-    'msg autor bot ',
-    msg.author.bot
-  );
-
   /*const onlineCount = channel.createdAt.filter(
     (m) => m.presence.status === 'online'
   ).size;
@@ -158,11 +150,10 @@ client.on('messageCreate', async (msg) => {
     case 'ping':
       msg.reply('Pong!');
       break;
-    //our meme command below
     case '!meme':
-      msg.channel.send("Here's your meme!"); //Replies to user command
+      msg.channel.send('Bimmm ton meme !!!');
       const img = await getMeme(); //fetches an URL from the API
-      msg.channel.send(img); //send the image URL
+      msg.channel.send(img);
       break;
     case '!hi':
     case '!hey':
@@ -178,13 +169,6 @@ client.on('messageCreate', async (msg) => {
       );
       break;
   }
-
-  console.log(
-    'channel infos : ',
-    msg.author.username,
-    ' first message content : ',
-    msg.content
-  );
 });
 
 client.login(process.env.token);
